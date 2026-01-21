@@ -20,6 +20,10 @@ function ButtonList() {
                 />
             ))}
 
+            {activeButton === null && (
+                <p>Nessun linguaggio selezionato</p>
+            )}
+
         </div>
 
     )
