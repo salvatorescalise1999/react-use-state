@@ -7,6 +7,10 @@ function ButtonList() {
     // settiamo la var di stato del componente per gestire l'apertura
     const [activeButton, setActivebutton] = useState(null);
 
+    const activeLanguage = languages.find(
+        (language) => language.id === activeButton
+    );
+
 
     return (
 
@@ -20,9 +24,13 @@ function ButtonList() {
                 />
             ))}
 
-            {activeButton === null && (
-                <p>Nessun linguaggio selezionato</p>
-            )}
+            <div className="detail-card">
+                {activeLanguage ? (
+                    <p>{activeLanguage.description}</p>
+                ) : (
+                    <p>Nessun linguaggio selezionato</p>
+                )}
+            </div>
 
         </div>
 

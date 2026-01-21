@@ -8,8 +8,6 @@ function Button (props){
         <div className="container-btn">
 
             <button onClick={onAccToggle} className="open-btn"> {title} </button>
-
-            {isOpen && <div className="decription-btn">{description}</div>}
             
         </div>
 
