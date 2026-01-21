@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-       <h1>Eccomi bella fresca nuova app React</h1>
+       <h1>Learn Web Development</h1>
             <ButtonList />
       
     </>
