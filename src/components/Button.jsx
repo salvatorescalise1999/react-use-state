@@ -1,13 +1,13 @@
 function Button (props){
 
     // destrutturiamo props
-    const {title, description, isOpen, onAccToggle } = props;
+    const {title, onAccToggle } = props;
     
 
     return(
         <div className="container-btn">
 
-            <button onClick={onAccToggle} className="open-btn"> {title} </button>
+            <button onClick={onAccToggle}> {title} </button>
             
         </div>
 
@@ -15,4 +15,3 @@ function Button (props){
 }
 
 export default Button
-
