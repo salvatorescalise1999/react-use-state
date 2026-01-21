@@ -50,9 +50,7 @@ button {
 
 .card {
   text-align: center;
-  /* centra testo nella card */
   width: 1000px;
-  /* larghezza fissa o personalizzabile */
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
