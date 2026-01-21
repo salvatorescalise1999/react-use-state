@@ -1,6 +1,9 @@
 import { useState } from "react";
 import languages from "../languages";
 import Button from "./Button";
+import ProductCard from "./ProductCard";
+
+
 
 function ButtonList() {
 
@@ -24,14 +27,8 @@ function ButtonList() {
                 />
             ))}
 
-            <div className="detail-card">
-                {activeLanguage ? (
-                    <p>{activeLanguage.description}</p>
-                ) : (
-                    <p>Nessun linguaggio selezionato</p>
-                )}
-            </div>
-
+            {/* card separata */}
+            <ProductCard language={activeLanguage} />
         </div>
 
     )
