@@ -18,17 +18,20 @@ function ButtonList() {
 
     return (
 
-        <div className="btn-list">
+        <div className="container">
+            <div className="btn-container">
+                {/* Mappa tutti i linguaggi e crea un Button per ciascuno */}
+                {languages.map((language) => (
+                    <Button key={language.id} // chiave unica per React
+                        title={language.title} // titolo del bottone
+                        isActive={activeButton === language.id} // <-- nuova prop che serve per modificare il colore quando è
+                        onAccToggle={() =>   // aggiorna lo stato: se già selezionato chiude, altrimenti apre
+                            setActiveButton(activeButton === language.id ? null : language.id)
+                        }
+                    />
+                ))}
 
-            {/* Mappa tutti i linguaggi e crea un Button per ciascuno */}
-            {languages.map((language) => (
-                <Button key={language.id} // chiave unica per React
-                    title={language.title} // titolo del bottone
-                    onAccToggle={() =>   // aggiorna lo stato: se già selezionato chiude, altrimenti apre
-                        setActiveButton(activeButton === language.id ? null : language.id)
-                    }
-                />
-            ))}
+            </div>
 
 
             {/* Card separata che mostra la descrizione del linguaggio attivo o messaggio di default */}

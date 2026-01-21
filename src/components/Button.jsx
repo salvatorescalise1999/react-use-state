@@ -1,15 +1,17 @@
-function Button (props){
+function Button(props) {
 
     // destrutturiamo props
-    const {title, onAccToggle } = props;
-    
+    const { title, onAccToggle, isActive } = props;
 
-    return(
-        <div className="container-btn">
+
+    return (
+        <div>
 
             {/* Bottone che chiama la funzione di toggle passata dal padre */}
-            <button onClick={onAccToggle}> {title} </button>
-            
+            <button className={isActive ? "btn-active" : "btn-inactive"} onClick={onAccToggle}>
+             {title} 
+            </button>
+
         </div>
 
     )
